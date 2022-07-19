@@ -6,4 +6,6 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          :registerable,
          jwt_revocation_strategy: JwtDenylist
+
+  scope :authors, -> { joins(:articles).where(articles: { published: true }).distinct }
 end
