@@ -19,7 +19,9 @@ gem "devise"
 
 gem "devise-jwt"
 
-gem 'pundit'
+gem "pundit"
+
+gem "active_model_serializers", "~> 0.10.0"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
